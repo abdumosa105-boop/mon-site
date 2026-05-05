@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <h1><img src="photo.JPG" alt="Photo de Abdulsalam Moussa" style="width:150px; height:150px; border-radius:50%;"></h1>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site de Abdulsalam Moussa</title>
+    <title>Abdulsalam Moussa</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            padding: 0 0 80px 0; /* leave space for fixed footer */
+            background-color: #0f0f0f;
+            color: #ffffff; /* make all text white by default */
         }
         header {
-            background-color: #333;
+            background-color: #030202;
             color: white;
             text-align: center;
             padding: 1em;
         }
+        
         nav {
-            background-color: #444;
+            background-color: #0c0404;
             padding: 0.5em;
         }
         nav ul {
@@ -32,34 +35,64 @@
             margin: 0 1em;
         }
         nav ul li a {
-            color: white;
+            color: #ffffff;
             text-decoration: none;
+            padding: 0.45em 0.8em;
+            font-size: 18px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        nav ul li a:hover {
+            background: rgba(255,255,255,0.06);
+            border-radius: 6px;
         }
         main {
             padding: 2em;
             text-align: center;
         }
         footer {
-            background-color: #333;
+            background-color: #050202;
             color: white;
             text-align: center;
-            padding: 1em;
+            padding: 0.9em 1em;
             position: fixed;
             bottom: 0;
             width: 100%;
+            box-shadow: 0 -4px 8px rgba(0,0,0,0.35);
+            z-index: 1001;
         }
-        p {
+        main p {
             font-weight: 300;
-            color: #555;
-            line-height: 1.6;
+            color: #111111;
+            line-height: 1.7;
+            font-size: 18px;
+            max-width: 900px;
+            margin: 0.6em auto;
+            text-align: left;
+        }
+        footer p {
+            color: #ffffff;
+            margin: 0;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        main p {
+            font-weight: 300;
+            color: #ffffff;
+            line-height: 1.7;
+            font-size: 18px;
+            max-width: 900px;
+            margin: 0.6em auto;
+            text-align: left;
         }
         h2, h3 {
-            font-weight: 400;
-            color: #333;
+            font-weight: 600;
+            color: #0b0b0b;
         }
         .follow-section {
             padding: 2em;
-            background-color: #f9f9f9;
+            background-color: #161616;
             margin-top: 3em;
             margin-bottom: 6em;
         }
@@ -86,11 +119,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 1000;
+            z-index: 1002; /* above footer */
         }
         .overlay-content {
-            background: white;
-            color: #333;
+            background: #1e1e1e;
+            color: #ffffff;
             padding: 2em;
             border-radius: 12px;
             max-width: 420px;
@@ -113,11 +146,30 @@
         .overlay-btn:hover {
             background-color: #218838;
         }
+        /* input fields: white background with dark text and placeholders */
+        input, textarea, select {
+            background: #ffffff;
+            color: #111111;
+            border: 1px solid #ccc;
+            padding: 8px;
+            border-radius: 4px;
+        }
+        input::placeholder, textarea::placeholder {
+            color: #edeaea;
+        }
     </style>
 </head>
 <body>
     <header>
+        <link rel="stylesheet" href="style.css">
         <h1>Bienvenue sur le site de Abdulsalam Moussa</h1>
+        <div class="contact-bar" style="margin-top:0.6em;background:#f1f1f1;padding:0.6em;border-radius:8px;display:flex;gap:1em;justify-content:center;flex-wrap:wrap;color:#222;">
+            <span><strong>Prénom:</strong> Abdulsalam</span>
+            <span><strong>Nom:</strong> Moussa</span>
+            <span><strong>Email:</strong> abdumosa105@email.com</span>
+            <span><strong>Tél:</strong> 07 80 41 67 22</span>
+            <span><strong>Développeur:</strong> je suis un développeur de sites web</span>
+        </div>
     </header>
     <nav>
         <ul>
@@ -129,18 +181,29 @@
     <div class="overlay" id="welcomeOverlay">
         <div class="overlay-content">
             <h2>Bienvenue</h2>
-            <p>Avant d'entrer sur le site, veuillez vous inscrire s'il vous plaît.</p>
-            <button class="overlay-btn" onclick="document.getElementById('welcomeOverlay').style.display='none'; window.location.hash='contact';">S'inscrire</button>
+          
+    <button class="overlay-btn" onclick="document.getElementById('welcomeOverlay').style.display='none'; window.location.hash='contact';">S'inscrire</button>
         </div>
     </div>
     <main>
         <section id="accueil">
             <h2>Accueil</h2>
-            <p>Ceci est la page d'accueil de mon premier site web. Je suis ravi de partager mes idées et mes projets ici.</p>
+            <p>Apprenez la programmation ! C'est une compétence essentielle pour l'avenir. Que vous soyez débutant ou expérimenté, la programmation ouvre des portes infinies : créer des applications, résoudre des problèmes complexes, et innover dans tous les domaines.</p>
+            <p>Voici une liste des langages de programmation populaires, classés par ordre de difficulté pour les débutants :</p>
+            <ol>
+                <li><strong>Python</strong> - Idéal pour les débutants : syntaxe simple, utilisé en data science et IA.</li>
+                <li><strong>JavaScript</strong> - Pour le web : interactivité et développement front-end.</li>
+                <li><strong>Java</strong> - Robuste et polyvalent : applications mobiles et entreprises.</li>
+                <li><strong>C#</strong> - Pour les jeux et applications Windows avec Unity.</li>
+                <li><strong>C++</strong> - Puissant pour les systèmes et jeux haute performance.</li>
+                <li><strong>PHP</strong> - Pour les sites web dynamiques.</li>
+                <li><strong>Ruby</strong> - Élégant pour le développement web rapide.</li>
+                <li><strong>Go</strong> - Efficace pour les services cloud et microservices.</li>
+            </ol>
+            <p>Commencez dès aujourd'hui et transformez votre avenir !</p>
         </section>
         <section id="a-propos">
             <h2>À Propos</h2>
-            <img src="images.jpg" alt="Photo de Abdulsalam Moussa" style="width:150px; height:150px; border-radius:50%;">
             <p>Je suis un développeur débutant passionné par la création de sites web. Ce site est mon premier projet.</p>
         </section>
         <section id="contact">
@@ -151,26 +214,29 @@
             <h3>Inscription</h3>
             <form action="#" method="post">
                 <label for="prenom">Prénom:</label><br>
-                <input type="text" id="prenom" name="prenom" required><br><br>
-                
-                <label for="nom">Nom:</label><br>
-                <input type="text" id="nom" name="nom" required><br><br>
-                
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+                <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom" required><br><br>
 
-                <label for="age">age:</label><br>
-                <input type="number" id="age" name="age" required><br><br>
-                
+                <label for="nom">Nom:</label><br>
+                <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Entrez votre email" required><br><br>
+
+                <label for="age">Age:</label><br>
+                <input type="number" id="age" name="age" placeholder="Entrez votre age" required><br><br>
+
                 <label for="telephone">Numéro de téléphone:</label><br>
-                <input type="tel" id="telephone" name="telephone" required><br><br>
-                
+                <input type="tel" id="telephone" name="telephone" placeholder="Entrez votre numéro de téléphone" required><br><br>
+
+                <input type="checkbox" id="conditions" name="conditions" required>
+                <label for="conditions">J'accepte les conditions d'utilisation et la politique de confidentialité</label><br><br>
+
                 <button type="submit">S'inscrire par Email</button>
                 <button type="button" onclick="alert('Fonctionnalité Google à implémenter')">S'inscrire par Google</button>
             </form>
         </section>
         <section class="follow-section">
-            <h2>Suivez-moi</h2>
+            <h2>Suivez-le ⬇️</h2>
             <p>Abonnez-vous pour rester informé de mes nouveaux projets et actualités.</p>
             <button class="follow-btn" onclick="alert('Merci de votre intérêt! Vous serez notifié des mises à jour.')">Suivre</button>
         </section>
